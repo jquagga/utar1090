@@ -6,3 +6,4 @@ RUN git clone https://github.com/wiedehopf/tar1090.git tar1090
 
 FROM httpd:2.4@sha256:374766f5bc5977c9b72fdb8ae3ed05b7fc89060e7edc88fcbf142d6988e58eeb
 COPY --from=htmlfiles /web/tar1090/html/ /usr/local/apache2/htdocs/public-html/
+USER 65532
