@@ -8,5 +8,5 @@ RUN git clone https://github.com/wiedehopf/tar1090.git tar1090
 FROM caddy:2@sha256:9fc94ed79892ca33b50bf9e548d6d639e6c8957b9e7b3965086dd754836903b6
 COPY --from=builder /web/tar1090/html/ /srv
 
-#USER 65532
+USER 65532
 CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
