@@ -8,5 +8,5 @@ RUN git clone https://github.com/wiedehopf/tar1090.git tar1090
 FROM nginx:stable@sha256:25b1dd75ab9caf2f84bc35cc82c0924c93a2b5b2495e280bb8f3bad826d5fb37
 COPY --from=builder /web/tar1090/html/ /usr/share/nginx/html
 
-USER 65532
+#USER 65532
 CMD ["nginx", "-g", "daemon off;"]
