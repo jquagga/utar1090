@@ -5,7 +5,7 @@ RUN apt-get update && \
     apt-get install --no-install-recommends -y git wget ca-certificates
 RUN git clone https://github.com/wiedehopf/tar1090.git tar1090
 
-FROM caddy:2-builder@sha256:534e79de086bdcc6350e63d0ce2e9f706401f0c18bda6d5e85ddb058ab229de8 AS caddybuilder
+FROM caddy:2-builder@sha256:11d1adf0651b0e447069bebb6c7276e49cc8677a24f67a0eecd72710ddc6fd37 AS caddybuilder
 
 RUN xcaddy build \
     --with github.com/caddy-dns/duckdns \
