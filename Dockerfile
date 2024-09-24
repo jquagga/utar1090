@@ -11,7 +11,7 @@ RUN xcaddy build \
     --with github.com/caddy-dns/duckdns \
     --with github.com/caddy-dns/cloudflare
 
-FROM gcr.io/distroless/static-debian12:latest@sha256:b033683de7de51d8cce5aa4b47c1b9906786f6256017ca8b17b2551947fcf6d8
+FROM gcr.io/distroless/static-debian12:latest@sha256:69830f29ed7545c762777507426a412f97dad3d8d32bae3e74ad3fb6160917ea
 COPY --from=builder /web/tar1090/html/ /srv
 COPY --from=caddybuilder /usr/bin/caddy /usr/bin/caddy
 
